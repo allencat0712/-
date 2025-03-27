@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRAZY KFC - 心情日记</title>
+    <style>
+        :root {
+            --primary-color: #e4002b;
+            /* KFC红 */
+            --secondary-color: #ffc72c;
+            /* KFC黄 */
+            --text-color: #333;
+            --light-bg: #fff9f0;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            padding: 20px 15px;
+            background-color: white;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 1.8rem;
+            margin: 15px 0 25px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        #editor {
+            width: 100%;
+            min-height: 200px;
+            border: 1px solid #eee;
+            padding: 15px;
+            font-size: 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            outline: none;
+            background-color: #fff;
+            margin-bottom: 20px;
+        }
+
+        #editor:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 2px rgba(255, 199, 44, 0.3);
+        }
+
+        .kfc-link {
+            display: block;
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .kfc-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, var(--primary-color), #c00);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(228, 0, 43, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .kfc-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(228, 0, 43, 0.4);
+        }
+
+        .kfc-btn:active {
+            transform: translateY(0);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 0.8rem;
+            padding: 10px 0;
+        }
+
+        .kfc-theme {
+            display: block;
+            text-align: right;
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: -10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span class="kfc-theme"></span>
+        <h1>CRAZY KFC</h1>
+        <div id="editor" contenteditable="true" spellcheck="false">
+            北京化工大学某实验室的灯，凌晨两点依然亮着。
+            监控画面里，学霸男友搂着一个"神秘身影"的腰，试管架在震荡器上疯狂摇晃——
+            但比离心机转得更快的，是这段三角关系的离奇真相。
+            同门师姐颤抖着划开手机，曝光了那段令导师摔碎烧杯的聊天记录：
+            "宝贝，你的分子键比女朋友更让我着迷。"
+            点击下方链接获得全文：
+        </div>
+
+        <div class="kfc-link">
+            <a href="https://m.kfc.com.cn/wechatcontent/fengsizhenjuandelicious/" class="kfc-btn">获得全文</a>
+        </div>
+
+        <footer>
+        </footer>
+    </div>
+</body>
+
+</html>
